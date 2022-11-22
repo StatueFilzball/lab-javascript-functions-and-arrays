@@ -121,7 +121,6 @@ You can use the following array to test your solution:
 ```javascript
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 ```
-
 <br>
 
 
