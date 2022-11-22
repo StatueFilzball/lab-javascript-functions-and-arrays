@@ -58,8 +58,47 @@ sumNumbers(numbers)
 
 
 
+
+
+
+
 // Iteration #3.1 Bonus:
-function sum() {}
+const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
+
+function sum(someArr) {
+
+  let numbersTotal = 0
+
+  for(let i = 0; i < someArr.length; i++) {
+
+//     if(typeof someArr[i] === "object" || typeof someArr[i] === array){
+//     throw 'Error!';
+//   }
+//   try
+// }
+
+//  catch (e) {
+//   console.error(e);}
+
+    
+if(typeof someArr[i] === "string") {
+      numbersTotal += someArr[i].length
+
+ } else if(typeof someArr[i] === "number") {
+  numbersTotal += someArr[i]
+
+ } else if(someArr[i] === true){
+  numbersTotal += 1
+ }
+    }
+console.log(numbersTotal)
+return numbersTotal
+}
+sum(mixedArr)
+
+
+
+
 
 
 
@@ -105,7 +144,28 @@ return characterTotal/wordsArr.length }}
 
 
 // Bonus - Iteration #4.1
-function avg() {}
+function avg(someArr) {
+  
+  if(someArr.length === 0){
+    return null
+  }
+  let numbersTotal = 0
+
+  for(let i = 0; i < someArr.length; i++) {
+
+ if(typeof someArr[i] === "string") {
+      numbersTotal += someArr[i].length
+
+ } else if(typeof someArr[i] === "number") {
+  numbersTotal += someArr[i]
+
+ } else if(someArr[i] === true){
+  numbersTotal += 1
+ }
+    }
+console.log(numbersTotal)
+return numbersTotal/someArr.length
+}
 
 
 
@@ -157,15 +217,6 @@ else if(wordsArr.includes(keyword)){
 }
 else return false
 }
-
-
-
-
-
-
-
-
-
 
 
 // Iteration #7: Count repetition
